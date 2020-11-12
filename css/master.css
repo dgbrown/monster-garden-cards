@@ -1,0 +1,31 @@
+.mg-card {
+    outline: 2px solid rgba(255, 255, 255, 0);
+    transition: transform 0.2s ease-in-out 0.1s, outline 0.2s ease-in-out 0s, z-index 0s linear 0.2s;
+    z-index: 0;
+    position: relative; /* important for the z-index magic to work */
+}
+
+.mg-minicard {
+    width: 20px;
+    height: 33px;
+    /* background:rgb(175, 175, 175); */
+    border-radius: 1px;
+    background-color: rgb(179, 179, 179);
+}
+
+.mg-card:hover, .mg-card.zoom {
+    transform: scale(1.5);
+    z-index: 2;
+}
+
+.mg-card.zoom {
+    outline: 2px solid white;
+}
+
+.mg-card-row {
+    margin-bottom: 40px;
+}
+
+.row-mb {
+    margin-bottom: 20px;
+}
