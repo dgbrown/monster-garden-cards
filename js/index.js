@@ -38,6 +38,12 @@ $(function () {
         showNRandomCards(cardsContainer, numCards);
     });
 
+    $("[data-click='show-n-cards']").click(function (event) {
+        event.preventDefault();
+        var numCards = parseInt($(this).data('nCards'));
+        showNRandomCards(cardsContainer, numCards);
+    });
+
     $("[data-click='show-all-cards']").click(function (event) {
         event.preventDefault();
         showAllCards(cardsContainer);

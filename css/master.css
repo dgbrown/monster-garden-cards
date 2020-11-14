@@ -5,14 +5,6 @@
     position: relative; /* important for the z-index magic to work */
 }
 
-.mg-minicard {
-    width: 20px;
-    height: 33px;
-    /* background:rgb(175, 175, 175); */
-    border-radius: 1px;
-    background-color: rgb(179, 179, 179);
-}
-
 .mg-card:hover, .mg-card.zoom {
     transform: scale(1.5);
     z-index: 2;
@@ -26,6 +18,14 @@
     margin-bottom: 40px;
 }
 
+.mg-minicard {
+    width: 20px;
+    height: 33px;
+    /* background:rgb(175, 175, 175); */
+    border-radius: 1px;
+    background-color: rgb(179, 179, 179);
+}
+
 .row-mb {
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }

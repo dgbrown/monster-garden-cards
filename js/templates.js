@@ -18,7 +18,7 @@ function makeCardsLayoutElemMarkup(cardLayout /* string[][] */) /* : string */ {
     return elemMarkup;
 }
 
-function makeCardsMarkup(cards /* string[] card img paths */, rowWidth = 5) /* : string */ {
+function makeCardsMarkup(cards /* string[] card img paths */, rowWidth = 3) /* : string */ {
     var cardGroups = R.splitEvery(rowWidth, cards);
     var markup = "";
     for (var i = 0; i < cardGroups.length; i++) {
