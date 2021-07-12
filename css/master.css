@@ -2,6 +2,22 @@ body {
     background:rgb(244, 232, 255);
 }
 
+.navbar {
+    background-image: url('../img/background.png');
+    padding-top: 100px;
+    background-size: cover;
+    background-position-y: center;
+    image-rendering: pixelated;
+    font-size: 10em;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff97f7 !important;
+    text-shadow: 2px 2px 0px #00000080
+}
+
 .jumbotron {
     background: #e0bfea;
 }
