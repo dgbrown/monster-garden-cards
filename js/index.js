@@ -19,14 +19,24 @@ function showCardLayout(container /* jquery elem */, layoutName) {
 $(function () {
     var cardsContainer = $("[data-inject='cards']");
 
-    
-    $(document).on('click', '.mg-card', function(){
+    // click / tap to toggle zoom lock
+    $(document).on('click', '.mg-card', function(event){
+        event.stopPropagation();
         $('.mg-card').not(this).removeClass('zoom');
         $(this).toggleClass('zoom');
     });
 
-    $(document).on('click', '.mg-card-container', function(){
-        $(this).find('.mg-card-back:not(.mg-card-back--hidden)').addClass('mg-card-back--hidden')
+    // click anywhere other than a card to dismiss / turn off active zoom lock
+    // (relies on card click stopPropagation)
+    $(document).on('click', function(){
+        $('.mg-card').removeClass('zoom');
+    })
+
+    // flip / reveal cards
+    // (stopPropagation to avoid triggering zoom lock)
+    $(document).on('click', '.mg-card-container .mg-card-back:not(.mg-card-back--hidden)', function(event){
+        event.stopPropagation();
+        $(this).addClass('mg-card-back--hidden')
     })
 
     $("[data-click='show-card-layout']").click(function (event) {

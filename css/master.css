@@ -58,16 +58,13 @@ a:hover, a:active {
     background: rgb(244, 232, 255);
 }
 
-.footer-social-item {
-
-}
-
 .footer-social-sep {
     padding: 0 10px;
 }
 
 .mg-card-container {
     position: relative;
+    background: #bb8bca;
 }
 
 .mg-card {
