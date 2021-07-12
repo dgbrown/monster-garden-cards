@@ -1,3 +1,59 @@
+body {
+    background:rgb(244, 232, 255);
+}
+
+.jumbotron {
+    background: #e0bfea;
+}
+
+a, a:visited {
+    color: #bb8bca;
+}
+
+a:hover, a:active {
+    color: rgb(219, 162, 236);
+}
+
+.btn-outline-primary {
+    color: #bb8bca;
+    border-color: #bb8bca;
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:not(:disabled):not(.disabled).active, .btn-outline-primary:not(:disabled):not(.disabled):active, .show>.btn-outline-primary.dropdown-toggle {
+    background-color: rgb(219, 162, 236);
+    border-color: rgb(219, 162, 236);
+}
+
+.btn-outline-primary.focus, .btn-outline-primary:focus, .btn-outline-primary:not(:disabled):not(.disabled).active:focus, .btn-outline-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-outline-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgb(219, 162, 236);
+}
+
+.instructions {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.footer-socials {
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    padding: 25px;
+    background: rgb(244, 232, 255);
+}
+
+.footer-social-item {
+
+}
+
+.footer-social-sep {
+    padding: 0 10px;
+}
+
+.mg-card-container {
+    position: relative;
+}
+
 .mg-card {
     outline: 2px solid rgba(255, 255, 255, 0);
     transition: transform 0.2s ease-in-out 0.1s, outline 0.2s ease-in-out 0s, z-index 0s linear 0.2s;
@@ -6,12 +62,19 @@
 }
 
 .mg-card:hover, .mg-card.zoom {
+    outline: 2px solid rgb(224, 145, 255);
     transform: scale(1.5);
     z-index: 2;
 }
 
-.mg-card.zoom {
-    outline: 2px solid white;
+.mg-card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.mg-card-back--hidden {
+    visibility: hidden;
 }
 
 .mg-card-row {
@@ -23,7 +86,7 @@
     height: 33px;
     /* background:rgb(175, 175, 175); */
     border-radius: 1px;
-    background-color: rgb(179, 179, 179);
+    background-color: #bb8bca;
 }
 
 .row-mb {

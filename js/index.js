@@ -5,25 +5,29 @@
 var cards = window.cards;
 
 function showNRandomCards(container /* jquery elem */, n /* int */) {
-    container.html(makeCardsMarkup(getRandomArrayItems(cards, n)));
+    container.html(makeCardsContainerMarkup(makeCardsMarkup(getRandomArrayItems(cards, n))));
 }
 
 function showAllCards(container /* jquery elem */) {
-    container.html(makeCardsMarkup(cards));
+    container.html(makeCardsContainerMarkup(makeCardsMarkup(cards)));
 }
 
 function showCardLayout(container /* jquery elem */, layoutName) {
-    container.html(makeCardsLayoutElemMarkup(makeLayout(layoutName, cards)));
+    container.html(makeCardsContainerMarkup(makeCardsLayoutElemMarkup(makeLayout(layoutName, cards))));
 }
 
 $(function () {
     var cardsContainer = $("[data-inject='cards']");
 
-    /* for mobile */
+    
     $(document).on('click', '.mg-card', function(){
         $('.mg-card').not(this).removeClass('zoom');
         $(this).toggleClass('zoom');
     });
+
+    $(document).on('click', '.mg-card-container', function(){
+        $(this).find('.mg-card-back:not(.mg-card-back--hidden)').addClass('mg-card-back--hidden')
+    })
 
     $("[data-click='show-card-layout']").click(function (event) {
         event.preventDefault();
@@ -47,5 +51,10 @@ $(function () {
     $("[data-click='show-all-cards']").click(function (event) {
         event.preventDefault();
         showAllCards(cardsContainer);
+    });
+
+    $('.card-buttons-container [data-click]').click(function (){
+        $(this).addClass('active');
+        $('.card-buttons-container [data-click]').not(this).removeClass('active');
     });
 });

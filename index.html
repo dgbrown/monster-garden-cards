@@ -15,12 +15,12 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar navbar-light ">
         <a class="navbar-brand">Monster Garden Readings</a>
     </nav>
 
     <div class="jumbotron jumbotron-fluid">
-        <div class="container">
+        <div class="container card-buttons-container">
             <div class="row row-cols-3">
                 <div class="col-12 col-md-4">
                     <a href="#" data-click="show-n-cards" data-n-cards="1" class="btn btn-outline-primary btn-block btn-lg">
@@ -56,7 +56,15 @@
         <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.
         </p>
         -->
-        <div data-inject="cards"></div>
+        <div data-inject="cards">
+            <div class="instructions deal-instructions">Choose 1, 2, or 3 cards to deal your unique layout</div>
+        </div>
+    </div>
+
+    <div class="footer-socials">
+        <a href="https://store.steampowered.com/app/719660/Monster_Garden/" class="footer-social-item">Play Monster Garden</a>
+        <span class="footer-social-sep">|</span>
+        <a href="http://twitch.tv/wzackw" class="footer-social-item">Watch Live Readings on Twitch</a>
     </div>
 
     <!-- scripts last so visible page loads first -->
